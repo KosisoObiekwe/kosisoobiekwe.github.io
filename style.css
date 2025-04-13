@@ -1,0 +1,306 @@
+/* ===== GLOBAL ===== */
+:root {
+    --primary: #FF9F1C;
+    --text: #FFFFFF;
+    --bg: #000000;
+    --card-bg: #111111;
+    --hover: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    background: var(--bg);
+    padding: 0.5px 0;
+    /* border-bottom: 1px solid #333; */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    scroll-behavior: smooth;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* ===== HEADER ===== */
+header {
+    padding: -200px 0;
+    margin-bottom: 2px;
+    margin-top: -100px;
+    background: var(--bg);
+    /* gap: 100px; */
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: -200px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    width: 500px;
+    margin-bottom: -42px;
+    /* border-radius: 10px;
+    border: 2px solid var(--primary); */
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-transform: none;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    
+}
+
+.main-btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--primary);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 159, 28, 0.3);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: var(--primary);
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* ===== BIO ===== */
+#bio {
+    padding: 4rem 0;
+    background: var(--card-bg);
+}
+
+#bio p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* ===== PROJECTS ===== */
+#projects {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary);
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 159, 28, 0.1);
+}
+
+.project-img {
+    height: 200px;
+    background: #222;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-content p {
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* ===== PITCH ===== */
+#pitch {
+    padding: 4rem 0;
+    background: var(--card-bg);
+    text-align: center;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #111;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-image img {
+        max-width: 250px;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+.image-container {
+    display: inline-block; /* Ensures the container fits the image */
+    overflow: hidden; /* Hides the overflow when zooming */
+    border-radius: 8px; /* Optional: Rounded corners */
+  }
+  
+  /* Image hover effect */
+  
+  .glow-zoom {
+
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    /* width: 450px; Ensures the image fills the container */
+    height: auto;
+  }
+  
+  .glow-zoom:hover {
+    transform: scale(1.05); /* Zoom effect (5% larger) */
+    /* box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);               Glow effect (white) */
+    /* For a colored glow (e.g., blue), use: */
+    /* box-shadow: 0 0 15px rgba(0, 100, 255, 0.8); */
+  }
